@@ -52,6 +52,9 @@ const AddTask = () => {
         if (!id) {
           await axios.post("http://localhost:5000/tasks/add", task);
           toast.success("Task Successfully Added!");
+          //   const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+          //   tasks.push(task);
+          // localStorage.setItem("tasks", JSON.stringify(tasks));
           setTask({ task: "", description: "", assign: "", status: "" });
           // navigate("/");
           setTimeout(() => {
